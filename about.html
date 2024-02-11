@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About US</title>
+    <link rel="icon" type="image/png" href="./assets/images/snipurl-high-resolution-logo-transparent.png">
+
+
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- slider links  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- slider links  -->
+  </head>
+  <body class="">
+    <!-- first section start ------------ -->
+    <section class="bgMian">
+      <!-- navbar start ----- -->
+      <nav class="navbar custom-nav navbar-expand-lg  px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand kutt" href="#"><img src="./assets/images/snipurl-high-resolution-logo-transparent.png" alt="" class="logo-tag" ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav w-100 d-flex justify-content-end">
+              <a
+                class="nav-link home"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+              <a class="nav-link home" href="./contact.html">Contact</a>
+        <a class="nav-link home active" href="./about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- navbar end ----- -->
+    </section>
+    <!-- first section end ------------ -->
+
+    <!-- about section start ---------- -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <h1 class="text-center about my-5">ABOUT US</h1>
+          <div>
+            <p class="text-center kuttPara">
+              At SnipURL, we understand the importance of simplicity and efficiency
+              when it comes to sharing links. Our mission is to provide you with
+              a fast, reliable, and user-friendly URL shortening service that
+              streamlines the process of sharing links, making it easier for you
+              to connect with your audience.
+            </p>
+            <p class="text-center kuttPara">
+              Our cutting-edge technology ensures that your long URLs are
+              transformed into short links instantly. Say goodbye to lengthy web
+              addresses and hello to concise and shareable links. Personalize
+              your short links to make them uniquely yours. Choose custom
+              aliases that reflect your brand or the content you are sharing.
+            </p>
+            <p class="text-center kuttPara">
+              Track the performance of your short links with our comprehensive
+              analytics dashboard. Gain valuable insights into link clicks,
+              geographic locations, and referral sources.Rest assured that your
+              data is handled with the utmost care. We prioritize the security
+              and privacy of your links, providing you with a trustworthy URL
+              shortening experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about section end ---------- -->
+
+    <section>
+      <div class="container"></div>
+    </section>
+
+    <!-- blog section end ----------- -->
+
+    <!-- contact us section end-----------------  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

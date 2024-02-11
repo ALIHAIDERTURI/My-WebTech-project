@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnipUrl</title>
+    <link rel="icon" type="image/png" href="./assets/images/snipurl-high-resolution-logo-transparent.png">
+
+    <link rel="stylesheet" href="./assets/libs/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4"></script>
+    <script src="./assets/libs/pako/pako.min.js"></script>
+    <script src="./assets/libs/pako/pako.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+
+<!-- slider links  -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<!-- slider links  -->
+
+  </head>
+  <body class="bgClr">
+    <!-- first section start ------------ -->
+    <section class=" bgMian">
+      <div class="">
+ <!-- navbar start ----- -->
+ <nav class="navbar  navbar-expand-lg custom-nav fixed-top px-5">
+  <div class="container-fluid">
+    <a class="navbar-brand kutt" href="#"><img src="./assets/images/snipurl-high-resolution-logo-transparent (1).png" alt="" class="logo-tag" ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav w-100 d-flex justify-content-end">
+        <a class="nav-link active home" aria-current="page" href="#"
+          >Home</a
+        >
+        <a class="nav-link home" href="./contact.html">Contact</a>
+        <a class="nav-link home" href="./about.html">About</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- navbar end ----- -->
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+    <div class="mt-5 pt-5 ">
+      <div class="pb-md-5  mb-md-5   inputPos">
+        <h1 class="kuttHead text-center  py-md-3">Snip your URLs Securely!</h1>
+        <div class="d-flex justify-content-between ">
+          <input
+		      id="input"
+          type="text"
+          class="form-control p-md-3 bg-transparent text-white "
+          placeholder="Enter Your URL"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+          />
+         
+          <button type="submit" onclick="snip()" class="btn shorten  text-white mx-2">
+            Snip<i class="fa-solid fa-scissors fa-flip-horizontal"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+      </div>
+     
+    </section>
+    <!-- first section end ------------ -->
+
+    <!-- features section start ------ -->
+<section class="ftBg bg-body-tertiary">
+  <div class="container py-5">
+<h1 class="text-center features">
+  Features
+</h1>
+<p class="text-center py-2 measures">
+  Measure traffic, know your audience, stay in control of your links.
+</p>
+
+    <div class="row pt-5">
+      <div class="col-md-4">
+       <div class="card p-4 cardShad  "  data-aos="flip-up">
+        <span class="iconBor"><i class="fa fa-lock fs-1"></i></span>
+        <h2 class="py-2">Privacy</h2>
+        <p>
+         Secure your links with password and expiration options
+        </p>
+       </div>
+       </div>
+      <div class="col-md-4 mt-3 mt-md-0">
+       <div class="card p-4 cardShad"  data-aos="flip-up">
+        <span class="iconBor"><i class="fa-solid fa-share-nodes fs-1"></i></span>
+        <h2 class="py-2">Share</h2>
+        <p>
+          Share your links on popular social platforms or via QR codes.
+        </p>
+       </div>
+       </div>
+      <div class="col-md-4 mt-3 mt-md-0">
+       <div class="card p-4 cardShad"  data-aos="flip-up">
+        <span class="iconBor"><i class="fa-solid fa-download fs-1"></i></span>
+        <h2 class="py-2">Export</h2>
+        <p>
+          Export all your links and statistics in CSV format.
+        </p>
+       </div>
+       </div>
+      <div class="col-md-4 mt-3">
+       <div class="card p-4 cardShad"  data-aos="flip-up">
+        <span class="iconBor"><i class="fa-solid fa-users-viewfinder fs-1"></i></span>
+        <h2 class="py-2">Target</h2>
+        <p>
+          Redirect your users based on the country, platform, or language.
+        </p>
+       </div>
+       </div>
+      <div class="col-md-4 mt-3">
+       <div class="card p-4 cardShad"  data-aos="flip-up">
+        <span class="iconBor"><i class="fa-solid fa-arrows-down-to-people fs-1"></i></span>
+        <h2 class="py-2">Retarget</h2>
+        <p>
+          Retarget your audience by adding tracking pixels to your links.
+        </p>
+       </div>
+       </div>
+      <div class="col-md-4 mt-3">
+       <div class="card p-4 cardShad"  data-aos="flip-up">
+        <span class="iconBor"><i class="fa-solid fa-chart-simple fs-1"></i></span>
+        <h2 class="py-2">Statistics</h2>
+        <p>
+          
+Get to know your audience, analyze the performance of your links
+        </p>
+       </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- features section end ------ -->
+
+    <!-- faqs section start ------------------- -->
+<section>
+  <div class="container py-5">
+    <h1 class="text-center  faq">FAQs</h1>
+  <div class="row mt-5">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item acc-item rounded ">
+          <h2 class="accordion-header">
+            <button class="accordion-button rounded  acc-item   collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              What is a URL shortener?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              A URL shortener is a tool that takes a long URL and creates a shortened version, making it easier to share on social media, in emails, or anywhere with character limitations.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item acc-item rounded  mt-2">
+          <h2 class="accordion-header">
+            <button class="accordion-button rounded acc-item collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapseOne">
+               How does our URL shortener work?
+            </button>
+          </h2>
+          <div id="flush-collapsetwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Our URL shortener works by taking your long URL and generating a unique, shortened link. When someone clicks on the shortened link, they are redirected to the original long URL.            </div>
+          </div>
+        </div>
+        <div class="accordion-item acc-item rounded  mt-2">
+          <h2 class="accordion-header">
+            <button class="accordion-button rounded acc-item collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree" aria-expanded="false" aria-controls="flush-collapseOne">
+              How long are the short URLs valid?
+            </button>
+          </h2>
+          <div id="flush-collapsethree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Shortened URLs created with our service have no expiration date. They will remain active as long as our URL shortening service is operational.          </div>
+        </div>
+        
+      </div>
+        <div class="accordion-item acc-item rounded  mt-2">
+          <h2 class="accordion-header">
+            <button class="accordion-button rounded acc-item collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsef" aria-expanded="false" aria-controls="flush-collapseOne">
+              How long are the short URLs valid?
+            </button>
+          </h2>
+          <div id="flush-collapsef" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Shortened URLs created with our service have no expiration date. They will remain active as long as our URL shortening service is operational.          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  </div>
+</section>
+
+    <!-- faqs section end ------------------- -->
+
+
+    <!-- customer review section start -------------- -->
+<section class="bg-body-tertiary">
+  <div class="container-fluid bg-contain p-md-5 p-3">
+    <div class="container p-0">
+      <p class="clients text-center">Client's Testimonials </p>
+        <h1 class="text-center peopleSay">WHAT PEOPLE SAY?</h1>
+         
+        <div class="owl-carousel mt-5 owl-theme">
+            <div class="single-box h-100  text-center ">
+                <div class="img-area">
+                    <img class="user-image1" src="./assets/images/bhpinder.png" alt="">
+                </div>
+                <div class="img-text pt-3">
+                    <h1>Bhupiner Jogi</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem laborum
+                        accusantium
+                        </p>
+                </div>
+                <div class="star1">
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                </div>
+            </div>
+            <div class="single-box h-100  text-center ">
+                <div class="img-area">
+                    <img class="user-image1" src="./assets/images/punnet.png" alt="">
+                </div>
+                <div class="img-text pt-3">
+                    <h1>Lord Puneet</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem laborum
+                        accusantium
+                        </p>
+                </div>
+                <div class="star1">
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                </div>
+            </div>
+            <div class="single-box h-100  text-center ">
+                <div class="img-area">
+                    <img class="user-image1" src="./assets/images/ayein.png" alt="">
+                </div>
+                <div class="img-text pt-3">
+                    <h1>The Topper</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem laborum
+                        accusantium
+                        </p>
+                </div>
+                <div class="star1">
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                    <i class="fas fa-star star1 startClr"></i>
+                </div>
+            </div>
+            <div class="single-box h-100  text-center ">
+              <div class="img-area">
+                  <img class="user-image1" src="./assets/images/baburao.png" alt="">
+              </div>
+              <div class="img-text pt-3">
+                  <h1>Babu Rao</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem laborum
+                      accusantium
+                      </p>
+              </div>
+              <div class="star1">
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+              </div>
+          </div>
+            <div class="single-box h-100  text-center ">
+              <div class="img-area">
+                  <img class="user-image1" src="./assets/images/waq.png" alt="">
+              </div>
+              <div class="img-text pt-3">
+                  <h1>Waqar Zaka</h1>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem laborum
+                      accusantium
+                      </p>
+              </div>
+              <div class="star1">
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+                  <i class="fas fa-star star1 startClr"></i>
+              </div>
+          </div>
+             
+             
+
+            <!-- Second Card -->
+
+        </div>
+
+
+        <!-- next -->
+
+         
+    </div>
+</div>
+</section>
+
+    <!-- customer review section end -------------- -->
+
+    <!-- contact us section start  ----------------->
+<section class="contactBg">
+  <div class="container py-5">
+    <div>
+      <p class="text-center p-0 m-0 contactUs ">
+        Contact Us
+      </p>
+      <h1 class="text-center get">
+        GET IN TOUCH!
+      </h1>
+    </div>
+    <div class="row mt-md-5 mt-3">
+      
+      
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label label-color">Your Name*</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label label-color">Your Email*</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label label-color">Your Subject*</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        
+       
+      </div>
+      <div class="col-md-6">
+        <div class="">
+          <label for="exampleFormControlTextarea1" class="form-label label-color">Your Message *</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="d-flex justify-content-center align-items-center mt-md-5 mt-3">
+          <button class="btn rounded-pill sendBtn px-4 py-2">
+              SEND MESSAGE 
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- contact us section end-----------------  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+          $('.owl-carousel').owlCarousel({
+              loop: true,
+              margin: 10,
+              responsiveClass: true,
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 2
+                  },
+                  1000: {
+                      items: 3
+                  }
+              }
+          });
+      });
+  </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
